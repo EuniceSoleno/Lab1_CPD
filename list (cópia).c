@@ -51,6 +51,10 @@ void insert_new_process(list_t *list, int pid, time_t starttime)
 void update_terminated_process(list_t *list, int pid, time_t endtime)
 {
 	list_item_t *p;
+	if(list == NULL)
+	{
+		printf("Lista Vazia");
+	}
 	
 	for(p = list->first ; p != NULL ; p = p->prox)
 	{
